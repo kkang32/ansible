@@ -1,15 +1,6 @@
----
 - name: Hello World Sample
   hosts: all
-  
   tasks:
-  - name: Directory exists (downloads)
-    file:
-      path: "/home/kkang32/download"
-      state: directory
-  
-  - name: Download JDK
-    get_url:
-      url: "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u265b01.tar.gz"
-      dest: "/home/kkang32/OpenJDK8U-jdk_x64_linux_hotspot_8u265b01.tar.gz"
-      mode: 0755
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
