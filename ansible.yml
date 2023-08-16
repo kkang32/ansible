@@ -1,5 +1,8 @@
 ---
-tasks:
+- name: Hello World Sample
+  hosts: all
+
+  tasks:
   - name: Directory exists (downloads)
     file:
       path: "{{ download_home }}"
